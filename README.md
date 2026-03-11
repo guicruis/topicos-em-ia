@@ -44,3 +44,29 @@ O arquivo de testes valida:
 - Suporte da classe `SelfAttention` para entrada 2D e 3D.
 - Tratamento de erro para dimensoes invalidas.
 - Determinismo da inicializacao com `seed`.
+
+## Laboratorio P1-02
+
+Implementacao do forward pass de um Transformer Encoder "from scratch" usando apenas `numpy` e `pandas`.
+
+Arquivos:
+- `LAB P1-02/encoder.py`: preparacao dos dados, embeddings, self-attention, layer normalization, feed-forward network, encoder layer e stack com `N=6`.
+- `LAB P1-02/test_encoder.py`: testes automatizados cobrindo preparacao de entrada, blocos matematicos e encoder completo.
+
+Dependencias:
+
+```bash
+pip install numpy pandas
+```
+
+Executar a demonstracao do encoder:
+
+```bash
+python "LAB P1-02/encoder.py"
+```
+
+Executar os testes do P1-02:
+
+```bash
+python -m unittest -v "LAB P1-02/test_encoder.py"
+```
