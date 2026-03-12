@@ -70,3 +70,23 @@ Executar os testes do P1-02:
 ```bash
 python -m unittest -v "LAB P1-02/test_encoder.py"
 ```
+
+## Laboratorio P1-03
+
+Implementacao dos blocos centrais do Decoder: mascara causal, cross-attention e loop de inferencia auto-regressivo.
+
+Arquivos:
+- `LAB P1-03/decoder.py`: implementa `create_causal_mask`, scaled dot-product attention com mascara, `cross_attention` e `MockDecoder`.
+- `LAB P1-03/test_decoder.py`: testes automatizados para mascara causal, cross-attention e geracao token a token.
+
+Executar a demonstracao do decoder:
+
+```bash
+python "LAB P1-03/decoder.py"
+```
+
+Executar os testes do P1-03:
+
+```bash
+python -m unittest -v "LAB P1-03/test_decoder.py"
+```
