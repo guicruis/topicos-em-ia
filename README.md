@@ -114,3 +114,34 @@ python -m unittest -v "LAB P1-04/test_transformer_complete.py"
 ## Nota Sobre IA
 
 Partes geradas/complementadas com IA, revisadas por Guilherme. A logica matematica da montagem do modelo foi revisada, ajustada e validada antes da entrega.
+
+Ferramentas externas utilizadas nos laboratorios finais:
+- `transformers` para tokenizacao com `AutoTokenizer`.
+- `datasets` para carregar subconjuntos de datasets do Hugging Face.
+- `torch` para treinamento, backpropagation e otimizacao do modelo do Lab 05.
+
+## Laboratorio P1-05
+
+Implementacao do treinamento fim-a-fim de um Transformer Encoder-Decoder com dataset real do Hugging Face, tokenizacao com `AutoTokenizer`, loop de treinamento com `CrossEntropyLoss` e `Adam`, e teste de overfitting com geracao auto-regressiva.
+
+Arquivos:
+- `LAB P1-05/train_transformer.py`: pipeline completo de dados, tokenizacao, modelo Transformer em PyTorch, treino e inferencia.
+- `LAB P1-05/test_train_transformer.py`: testes sinteticos cobrindo shapes, mascara causal e uma etapa de treinamento.
+
+Dependencias:
+
+```bash
+pip install torch datasets transformers numpy pandas
+```
+
+Executar o treinamento do Lab 05:
+
+```bash
+python "LAB P1-05/train_transformer.py"
+```
+
+Executar os testes do Lab 05:
+
+```bash
+python -m unittest -v "LAB P1-05/test_train_transformer.py"
+```
