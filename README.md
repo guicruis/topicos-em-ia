@@ -90,3 +90,27 @@ Executar os testes do P1-03:
 ```bash
 python -m unittest -v "LAB P1-03/test_decoder.py"
 ```
+
+## Laboratorio P1-04
+
+Implementacao do Transformer completo "from scratch", integrando Encoder, Decoder, Add & Norm, FFN, mascara causal e loop auto-regressivo de inferencia.
+
+Arquivos:
+- `LAB P1-04/transformer_complete.py`: implementa a arquitetura Encoder-Decoder completa e uma demonstracao com a entrada `Thinking Machines`.
+- `LAB P1-04/test_transformer_complete.py`: testes automatizados cobrindo mascara causal, blocos Encoder/Decoder e inferencia fim-a-fim.
+
+Executar a demonstracao do Transformer completo:
+
+```bash
+python "LAB P1-04/transformer_complete.py"
+```
+
+Executar os testes do P1-04:
+
+```bash
+python -m unittest -v "LAB P1-04/test_transformer_complete.py"
+```
+
+## Nota Sobre IA
+
+Partes geradas/complementadas com IA, revisadas por Guilherme. A logica matematica da montagem do modelo foi revisada, ajustada e validada antes da entrega.
