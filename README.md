@@ -145,3 +145,31 @@ Executar os testes do Lab 05:
 ```bash
 python -m unittest -v "LAB P1-05/test_train_transformer.py"
 ```
+
+## Laboratorio P1-06
+
+Implementacao de um tokenizador BPE basico "from scratch" e exploracao pratica do WordPiece com o tokenizador multilingue do BERT.
+
+Arquivos:
+- `LAB P1-06/bpe_wordpiece.py`: implementa `get_stats`, `merge_vocab`, o loop de 5 fusoes e a demonstracao com `AutoTokenizer`.
+- `LAB P1-06/test_bpe_wordpiece.py`: testes automatizados para frequencias de pares e fusao BPE.
+
+Executar a demonstracao do Lab 06:
+
+```bash
+python "LAB P1-06/bpe_wordpiece.py"
+```
+
+Executar os testes do Lab 06:
+
+```bash
+python -m unittest -v "LAB P1-06/test_bpe_wordpiece.py"
+```
+
+## Explicacao Sobre ##
+
+No WordPiece, o prefixo `##` indica que o token e uma continuacao da subpalavra anterior, e nao o inicio de uma palavra nova. Isso permite representar palavras raras ou desconhecidas como composicoes de partes menores ja vistas, reduzindo o tamanho do vocabulario e evitando que o modelo falhe diante de termos fora do conjunto exato de treino.
+
+## Nota Especifica de IA no Lab 06
+
+No Lab 06, a construcao da expressao regular usada na funcao `merge_vocab` foi assistida por IA e depois revisada, testada e ajustada manualmente para garantir que apenas pares completos de simbolos fossem fundidos.
