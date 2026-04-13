@@ -202,7 +202,7 @@ cython_debug/
 .cursorindexingignore
 
 # Lab outputs
-LAB P1-07/outputs/
+LAB P2-07/outputs/
 
 # Marimo
 marimo/_static/
