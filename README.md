@@ -173,3 +173,47 @@ No WordPiece, o prefixo `##` indica que o token e uma continuacao da subpalavra 
 ## Nota Especifica de IA no Lab 06
 
 No Lab 06, a construcao da expressao regular usada na funcao `merge_vocab` foi assistida por IA e depois revisada, testada e ajustada manualmente para garantir que apenas pares completos de simbolos fossem fundidos.
+
+## Laboratorio P1-07
+
+Pipeline completo de fine-tuning eficiente com dataset sintetico em `.jsonl`, quantizacao 4-bit com `nf4`, adaptacao via LoRA e treinamento supervisionado com `SFTTrainer`.
+
+Arquivos:
+- `LAB P1-07/qlora_pipeline.py`: gera dataset sintetico no dominio escolhido, salva `train/test` em JSONL, configura QLoRA e executa o treino com `paged_adamw_32bit`.
+- `LAB P1-07/test_qlora_pipeline.py`: testes automatizados para a geracao sintetica, split 90/10 e hiperparametros obrigatorios do PDF.
+- `LAB P1-07/data/synthetic_train.jsonl`: conjunto de treino com 54 exemplos.
+- `LAB P1-07/data/synthetic_test.jsonl`: conjunto de teste com 6 exemplos.
+
+Dependencias:
+
+```bash
+pip install torch transformers datasets peft trl bitsandbytes accelerate openai
+```
+
+Gerar os arquivos do dataset:
+
+```bash
+python "LAB P1-07/qlora_pipeline.py" generate-data
+```
+
+Inspecionar a configuracao exigida pelo laboratorio:
+
+```bash
+python "LAB P1-07/qlora_pipeline.py" describe
+```
+
+Executar o treino QLoRA:
+
+```bash
+python "LAB P1-07/qlora_pipeline.py" train
+```
+
+Executar os testes do Lab 07:
+
+```bash
+python -m unittest -v "LAB P1-07/test_qlora_pipeline.py"
+```
+
+Observacao:
+- A geracao sintetica tenta usar a API da OpenAI quando o pacote e a credencial estiverem disponiveis.
+- Em ambiente offline, o script cai para uma geracao deterministica local para ainda produzir os arquivos `jsonl` exigidos para a entrega.
