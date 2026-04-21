@@ -203,6 +203,7 @@ cython_debug/
 
 # Lab outputs
 LAB P2-07/outputs/
+LAB P2-08/outputs/
 
 # Marimo
 marimo/_static/

@@ -217,3 +217,46 @@ python -m unittest -v "LAB P2-07/test_qlora_pipeline.py"
 Observacao:
 - A geracao sintetica tenta usar a API da OpenAI quando o pacote e a credencial estiverem disponiveis.
 - Em ambiente offline, o script cai para uma geracao deterministica local para ainda produzir os arquivos `jsonl` exigidos para a entrega.
+
+## Laboratorio P2-08
+
+Pipeline de alinhamento com Direct Preference Optimization (DPO) para suprimir respostas inseguras a partir de pares `prompt/chosen/rejected`, mantendo um modelo ator treinavel e um modelo de referencia congelado.
+
+Arquivos:
+- `LAB P2-08/dpo_pipeline.py`: gera o dataset de preferencias, configura `DPOTrainer`, carrega modelo ator e modelo de referencia, treina com `paged_adamw_32bit` e valida a supressao da resposta rejeitada.
+- `LAB P2-08/test_dpo_pipeline.py`: testes automatizados para as colunas obrigatorias do dataset, `beta=0.1`, configuracao do otimizador e regra de supressao da resposta rejeitada.
+- `LAB P2-08/data/preference_train.jsonl`: dataset de treino com apenas as colunas `prompt`, `chosen` e `rejected`.
+- `LAB P2-08/data/preference_eval.jsonl`: dataset de avaliacao com as mesmas colunas.
+
+Dependencias:
+
+```bash
+pip install torch transformers datasets peft trl bitsandbytes accelerate
+```
+
+Gerar o dataset de preferencias:
+
+```bash
+python "LAB P2-08/dpo_pipeline.py" generate-data
+```
+
+Inspecionar a configuracao e a justificativa do beta:
+
+```bash
+python "LAB P2-08/dpo_pipeline.py" describe
+```
+
+Executar o treino DPO:
+
+```bash
+python "LAB P2-08/dpo_pipeline.py" train
+```
+
+Executar os testes do Lab 08:
+
+```bash
+python -m unittest -v "LAB P2-08/test_dpo_pipeline.py"
+```
+
+Papel matematico do beta:
+No DPO, `beta = 0.1` multiplica a margem entre os log-ratios da resposta escolhida e da rejeitada antes da `log-sigmoid`, regulando o quanto o modelo ator pode se afastar do modelo de referencia. Na pratica, ele funciona como uma temperatura inversa: valores maiores reforcam mais a preferencia e aliviam o "imposto" imposto pelo modelo de referencia; valores menores conservam mais a fluidez original e tornam mais forte o efeito equivalente a uma penalizacao de divergencia de KL.
