@@ -1,0 +1,24 @@
+{"doc_id": "MED-001", "title": "Cefaleia com aura", "specialty": "neurologia", "text": "Cefaleia pulsatil unilateral associada a fotofobia, fonofobia, nausea e escotomas cintilantes sugere migranea com aura."}
+{"doc_id": "MED-002", "title": "Hipertensao grave", "specialty": "cardiologia", "text": "Pressao arterial acima de 180 por 120 mmHg com dor toracica, dispneia ou deficit neurologico indica emergencia hipertensiva."}
+{"doc_id": "MED-003", "title": "Hipoglicemia", "specialty": "endocrinologia", "text": "Sudorese fria, tremores, palpitacoes e confusao mental em paciente diabetico sugerem hipoglicemia sintomatica."}
+{"doc_id": "MED-004", "title": "Fotofobia e rigidez nucal", "specialty": "infectologia", "text": "Febre, cefaleia intensa, fotofobia e rigidez de nuca exigem avaliacao urgente para meningite."}
+{"doc_id": "MED-005", "title": "Dor abdominal migratoria", "specialty": "cirurgia", "text": "Dor periumbilical que migra para fossa iliaca direita com anorexia e febre baixa e compativel com apendicite aguda."}
+{"doc_id": "MED-006", "title": "Dispneia e sibilancia", "specialty": "pneumologia", "text": "Episodios de dispneia, tosse noturna, sibilos expiratorios e melhora com broncodilatador sugerem asma."}
+{"doc_id": "MED-007", "title": "Pneumonia comunitaria", "specialty": "pneumologia", "text": "Tosse produtiva, febre, dor pleuritica e crepitacoes focais indicam pneumonia adquirida na comunidade."}
+{"doc_id": "MED-008", "title": "Tromboembolismo pulmonar", "specialty": "emergencia", "text": "Dispneia subita, dor pleuritica, taquicardia e dessaturacao apos imobilizacao elevam suspeita de embolia pulmonar."}
+{"doc_id": "MED-009", "title": "Acidente vascular cerebral", "specialty": "neurologia", "text": "Assimetria facial, disartria e fraqueza unilateral de inicio subito demandam protocolo de AVC."}
+{"doc_id": "MED-010", "title": "Vertigem periferica", "specialty": "otorrino", "text": "Vertigem rotatoria breve desencadeada por mudanca de posicao da cabeca sugere vertigem posicional paroxistica benigna."}
+{"doc_id": "MED-011", "title": "Anemia ferropriva", "specialty": "hematologia", "text": "Fadiga, palidez, pica, ferritina baixa e microcitose sao achados tipicos de anemia por deficiencia de ferro."}
+{"doc_id": "MED-012", "title": "Sepse", "specialty": "emergencia", "text": "Hipotensao, taquipneia, febre ou hipotermia com foco infeccioso sugerem sepse e exigem antibiotico precoce."}
+{"doc_id": "MED-013", "title": "Insuficiencia cardiaca", "specialty": "cardiologia", "text": "Ortopneia, edema maleolar, estertores bibasais e ganho ponderal rapido sugerem descompensacao de insuficiencia cardiaca."}
+{"doc_id": "MED-014", "title": "Colica renal", "specialty": "urologia", "text": "Dor lombar intensa irradiada para virilha, hematuria e inquietacao sao compativeis com ureterolitiase."}
+{"doc_id": "MED-015", "title": "Cetoacidose diabetica", "specialty": "endocrinologia", "text": "Poliuria, polidipsia, vomitos, respiracao de Kussmaul e cetonemia sugerem cetoacidose diabetica."}
+{"doc_id": "MED-016", "title": "Crise tireotoxica", "specialty": "endocrinologia", "text": "Febre, taquiarritmia, agitacao, diarreia e hipertireoidismo conhecido sugerem tempestade tireoidiana."}
+{"doc_id": "MED-017", "title": "Sinusite bacteriana", "specialty": "otorrino", "text": "Rinorreia purulenta, dor facial e sintomas por mais de dez dias favorecem rinossinusite bacteriana."}
+{"doc_id": "MED-018", "title": "Glaucoma agudo", "specialty": "oftalmologia", "text": "Dor ocular intensa, halos coloridos, midriase media e nausea sugerem fechamento angular agudo."}
+{"doc_id": "MED-019", "title": "Reacao anafilatica", "specialty": "alergologia", "text": "Urticaria difusa, broncoespasmo, edema de glote ou hipotensao apos exposicao a alergeno indicam anafilaxia."}
+{"doc_id": "MED-020", "title": "Artrite septica", "specialty": "reumatologia", "text": "Monoartrite aguda com febre, derrame articular e dor a mobilizacao passiva requer puncao articular urgente."}
+{"doc_id": "MED-021", "title": "Trombose venosa profunda", "specialty": "vascular", "text": "Edema unilateral de panturrilha, dor, calor local e antecedente de imobilizacao sugerem TVP."}
+{"doc_id": "MED-022", "title": "Sindrome coronariana", "specialty": "cardiologia", "text": "Dor precordial opressiva irradiada para braco esquerdo, diaforese e nausea sugerem sindrome coronariana aguda."}
+{"doc_id": "MED-023", "title": "Delirium", "specialty": "geriatria", "text": "Alteracao aguda e flutuante da atencao em idoso hospitalizado e compativel com delirium."}
+{"doc_id": "MED-024", "title": "Pancreatite aguda", "specialty": "gastroenterologia", "text": "Dor epigastrica irradiada para dorso, nausea e lipase elevada sugerem pancreatite aguda."}

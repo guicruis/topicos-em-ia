@@ -260,3 +260,31 @@ python -m unittest -v "LAB P2-08/test_dpo_pipeline.py"
 
 Papel matematico do beta:
 No DPO, `beta = 0.1` multiplica a margem entre os log-ratios da resposta escolhida e da rejeitada antes da `log-sigmoid`, regulando o quanto o modelo ator pode se afastar do modelo de referencia. Na pratica, ele funciona como uma temperatura inversa: valores maiores reforcam mais a preferencia e aliviam o "imposto" imposto pelo modelo de referencia; valores menores conservam mais a fluidez original e tornam mais forte o efeito equivalente a uma penalizacao de divergencia de KL.
+
+## Laboratorio P2-09
+
+Pipeline RAG avancado para manuais medicos privados, combinando HyDE, indice vetorial HNSW, busca top-10 por bi-encoder e re-ranking top-3 por Cross-Encoder.
+
+Arquivos:
+- `LAB P2-09/rag_hyde_pipeline.py`: implementa dataset simulado, embeddings, indice HNSW, transformacao HyDE, recuperacao e re-ranking.
+- `LAB P2-09/test_rag_hyde_pipeline.py`: testes automatizados para dataset, HNSW, HyDE, recuperacao top-10 e top-3 final.
+- `LAB P2-09/README.md`: instrucoes e analise de `M` e `ef_construction` no consumo de RAM.
+- `LAB P2-09/data/medical_fragments.jsonl`: 24 fragmentos tecnicos simulados.
+
+Dependencias completas:
+
+```bash
+pip install hnswlib sentence-transformers openai
+```
+
+Executar a busca:
+
+```bash
+python "LAB P2-09/rag_hyde_pipeline.py" query --query "dor de cabeca latejante e luz incomodando"
+```
+
+Executar os testes do Lab 09:
+
+```bash
+python -m unittest -v "LAB P2-09/test_rag_hyde_pipeline.py"
+```

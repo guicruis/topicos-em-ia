@@ -1,0 +1,118 @@
+{
+  "query": "dor de cabeca latejante e luz incomodando",
+  "hypothetical_document": "Documento hipotetico HyDE: paciente relata dor de cabeca latejante e luz incomodando. Termos tecnicos relevantes: cefaleia intensa, migranea, fotofobia, fonofobia e sinais neurologicos focais; fotofobia associada a cefaleia, migranea com aura ou meningite conforme febre e rigidez nucal.",
+  "index_backend": "exact-fallback",
+  "hnsw_parameters": {
+    "M": 16,
+    "ef_construction": 120,
+    "ef_search": 64
+  },
+  "top_10_retrieved": [
+    {
+      "doc_id": "MED-001",
+      "title": "Cefaleia com aura",
+      "specialty": "neurologia",
+      "text": "Cefaleia pulsatil unilateral associada a fotofobia, fonofobia, nausea e escotomas cintilantes sugere migranea com aura.",
+      "retrieval_score": 0.5370861555295746,
+      "rerank_score": null
+    },
+    {
+      "doc_id": "MED-004",
+      "title": "Fotofobia e rigidez nucal",
+      "specialty": "infectologia",
+      "text": "Febre, cefaleia intensa, fotofobia e rigidez de nuca exigem avaliacao urgente para meningite.",
+      "retrieval_score": 0.5,
+      "rerank_score": null
+    },
+    {
+      "doc_id": "MED-012",
+      "title": "Sepse",
+      "specialty": "emergencia",
+      "text": "Hipotensao, taquipneia, febre ou hipotermia com foco infeccioso sugerem sepse e exigem antibiotico precoce.",
+      "retrieval_score": 0.4003203845127179,
+      "rerank_score": null
+    },
+    {
+      "doc_id": "MED-015",
+      "title": "Cetoacidose diabetica",
+      "specialty": "endocrinologia",
+      "text": "Poliuria, polidipsia, vomitos, respiracao de Kussmaul e cetonemia sugerem cetoacidose diabetica.",
+      "retrieval_score": 0.3076923076923077,
+      "rerank_score": null
+    },
+    {
+      "doc_id": "MED-023",
+      "title": "Delirium",
+      "specialty": "geriatria",
+      "text": "Alteracao aguda e flutuante da atencao em idoso hospitalizado e compativel com delirium.",
+      "retrieval_score": 0.28644594961577313,
+      "rerank_score": null
+    },
+    {
+      "doc_id": "MED-005",
+      "title": "Dor abdominal migratoria",
+      "specialty": "cirurgia",
+      "text": "Dor periumbilical que migra para fossa iliaca direita com anorexia e febre baixa e compativel com apendicite aguda.",
+      "retrieval_score": 0.2660905781950872,
+      "rerank_score": null
+    },
+    {
+      "doc_id": "MED-007",
+      "title": "Pneumonia comunitaria",
+      "specialty": "pneumologia",
+      "text": "Tosse produtiva, febre, dor pleuritica e crepitacoes focais indicam pneumonia adquirida na comunidade.",
+      "retrieval_score": 0.23076923076923078,
+      "rerank_score": null
+    },
+    {
+      "doc_id": "MED-020",
+      "title": "Artrite septica",
+      "specialty": "reumatologia",
+      "text": "Monoartrite aguda com febre, derrame articular e dor a mobilizacao passiva requer puncao articular urgente.",
+      "retrieval_score": 0.20180183819889375,
+      "rerank_score": null
+    },
+    {
+      "doc_id": "MED-006",
+      "title": "Dispneia e sibilancia",
+      "specialty": "pneumologia",
+      "text": "Episodios de dispneia, tosse noturna, sibilos expiratorios e melhora com broncodilatador sugerem asma.",
+      "retrieval_score": 0.19230769230769232,
+      "rerank_score": null
+    },
+    {
+      "doc_id": "MED-014",
+      "title": "Colica renal",
+      "specialty": "urologia",
+      "text": "Dor lombar intensa irradiada para virilha, hematuria e inquietacao sao compativeis com ureterolitiase.",
+      "retrieval_score": 0.19230769230769232,
+      "rerank_score": null
+    }
+  ],
+  "top_3_final": [
+    {
+      "doc_id": "MED-001",
+      "title": "Cefaleia com aura",
+      "specialty": "neurologia",
+      "text": "Cefaleia pulsatil unilateral associada a fotofobia, fonofobia, nausea e escotomas cintilantes sugere migranea com aura.",
+      "retrieval_score": 0.5370861555295746,
+      "rerank_score": 0.8928571428571428
+    },
+    {
+      "doc_id": "MED-004",
+      "title": "Fotofobia e rigidez nucal",
+      "specialty": "infectologia",
+      "text": "Febre, cefaleia intensa, fotofobia e rigidez de nuca exigem avaliacao urgente para meningite.",
+      "retrieval_score": 0.5,
+      "rerank_score": 0.8857142857142857
+    },
+    {
+      "doc_id": "MED-015",
+      "title": "Cetoacidose diabetica",
+      "specialty": "endocrinologia",
+      "text": "Poliuria, polidipsia, vomitos, respiracao de Kussmaul e cetonemia sugerem cetoacidose diabetica.",
+      "retrieval_score": 0.3076923076923077,
+      "rerank_score": 0.2857142857142857
+    }
+  ]
+}
