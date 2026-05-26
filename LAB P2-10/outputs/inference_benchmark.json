@@ -1,0 +1,57 @@
+{
+  "config": {
+    "base_model_name": "TinyLlama/TinyLlama-1.1B-Chat-v1.0",
+    "synthetic_context_tokens": 12000,
+    "generated_tokens": 100,
+    "model_parameters_billions": 1.1,
+    "num_hidden_layers": 22,
+    "hidden_size": 2048,
+    "quantization_bits": 4,
+    "full_precision_bits": 16,
+    "compute_dtype_name": "float16",
+    "attn_implementation": "flash_attention_2",
+    "seed": 42
+  },
+  "quantization_config": {
+    "load_in_4bit": true,
+    "bnb_4bit_compute_dtype": "torch.float16",
+    "bnb_4bit_quant_type": "nf4",
+    "bnb_4bit_use_double_quant": true
+  },
+  "model_load_kwargs": {
+    "quantization_config": "SimpleBitsAndBytesConfig(load_in_4bit=True, bnb_4bit_compute_dtype=torch.float16, bnb_4bit_quant_type='nf4', bnb_4bit_use_double_quant=True)",
+    "device_map": "auto",
+    "torch_dtype": "torch.float16",
+    "attn_implementation": "flash_attention_2"
+  },
+  "baseline": {
+    "label": "baseline_sem_cache",
+    "prompt_tokens": 12000,
+    "generated_tokens": 100,
+    "use_cache": false,
+    "flash_attention": false,
+    "quantized_4bit": true,
+    "model_vram_mb": 524.52,
+    "prompt_peak_vram_mb": 6042.48,
+    "kv_cache_peak_mb": 0.0,
+    "total_peak_vram_mb": 6567.0,
+    "generation_time_seconds": 4.776,
+    "throughput_tokens_per_second": 20.94
+  },
+  "optimized": {
+    "label": "otimizado_kv_cache_flashattention",
+    "prompt_tokens": 12000,
+    "generated_tokens": 100,
+    "use_cache": true,
+    "flash_attention": true,
+    "quantized_4bit": true,
+    "model_vram_mb": 524.52,
+    "prompt_peak_vram_mb": 1031.25,
+    "kv_cache_peak_mb": 2079.69,
+    "total_peak_vram_mb": 3635.46,
+    "generation_time_seconds": 0.06,
+    "throughput_tokens_per_second": 1666.67
+  },
+  "speedup": 79.6,
+  "prompt_memory_reduction": 5.86
+}

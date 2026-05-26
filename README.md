@@ -288,3 +288,30 @@ Executar os testes do Lab 09:
 ```bash
 python -m unittest -v "LAB P2-09/test_rag_hyde_pipeline.py"
 ```
+
+## Laboratorio P2-10
+
+Pipeline integrador de producao para RAG massivo, combinando QLoRA em 4 bits, KV Cache e FlashAttention-2 para reduzir VRAM e latencia de inferencia em contexto medico longo.
+
+Arquivos:
+- `LAB P2-10/production_rag_inference.py`: gera contexto medico de 10k a 15k tokens, configura carregamento quantizado, simula baseline sem cache e versao otimizada com KV Cache e FlashAttention.
+- `LAB P2-10/test_production_rag_inference.py`: testes automatizados para contexto massivo, configuracao QLoRA, FlashAttention, KV Cache e metricas comparativas.
+- `LAB P2-10/README.md`: instrucoes, metricas de benchmark e analise arquitetural sobre Transformer, FlashAttention e State Space Models.
+
+Dependencias completas para GPU:
+
+```bash
+pip install torch transformers bitsandbytes accelerate flash-attn
+```
+
+Executar o benchmark:
+
+```bash
+python "LAB P2-10/production_rag_inference.py" benchmark
+```
+
+Executar os testes do Lab 10:
+
+```bash
+python -m unittest -v "LAB P2-10/test_production_rag_inference.py"
+```
